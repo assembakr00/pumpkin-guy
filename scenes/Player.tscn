@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://j0doefvk1tu7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rglt0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rglt0"]
+size = Vector2(20, 39)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=2123484321]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=60712439]
+sprite_frames = SubResource("SpriteFrames_rglt0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2009662776]
+position = Vector2(0, -9.5)
+shape = SubResource("RectangleShape2D_rglt0")
