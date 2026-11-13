@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dubxb1x4pox77"]
+
+[ext_resource type="AudioStream" uid="uid://bwku0i5ymf2i4" path="res://assets/music/djartmusic-best-game-console-301284.mp3" id="1_05ggv"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" unique_id=1935207831]
+stream = ExtResource("1_05ggv")
+autoplay = true
+bus = &"bg"
