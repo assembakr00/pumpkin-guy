@@ -1,22 +1,23 @@
 [gd_scene format=3 uid="uid://j0doefvk1tu7"]
 
 [ext_resource type="Texture2D" uid="uid://bmunsjwdgny57" path="res://assets/brackeys_platformer_assets/sprites/knight.png" id="1_p0vlq"]
-[ext_resource type="Script" uid="uid://do7wfhwxhbk7r" path="res://scripts/player.gd" id="1_v6fml"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v6fml"]
-atlas = ExtResource("1_p0vlq")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3li8b"]
-atlas = ExtResource("1_p0vlq")
-region = Rect2(32, 0, 32, 32)
+[ext_resource type="Script" uid="uid://fr1i4wgyv7e2" path="res://scripts/player.gd" id="1_v6fml"]
+[ext_resource type="Texture2D" uid="uid://ddqvuhqdnol8p" path="res://assets/player-idle.png" id="2_3li8b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mdl7e"]
-atlas = ExtResource("1_p0vlq")
-region = Rect2(64, 0, 32, 32)
+atlas = ExtResource("2_3li8b")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qu4a1"]
-atlas = ExtResource("1_p0vlq")
+atlas = ExtResource("2_3li8b")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b8lor"]
+atlas = ExtResource("2_3li8b")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6e537"]
+atlas = ExtResource("2_3li8b")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_70d11"]
@@ -87,20 +88,20 @@ region = Rect2(224, 96, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_v6fml")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3li8b")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_mdl7e")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qu4a1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8lor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6e537")
 }],
 "loop": 1,
 "name": &"idle",
-"speed": 4.5
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -156,8 +157,8 @@ animations = [{
 "speed": 7.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rglt0"]
-size = Vector2(8.5, 14)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xsi7p"]
+size = Vector2(24, 27)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=2123484321]
 script = ExtResource("1_v6fml")
@@ -166,8 +167,7 @@ script = ExtResource("1_v6fml")
 sprite_frames = SubResource("SpriteFrames_l8iau")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.3237006
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2009662776]
-position = Vector2(0.25, 4)
-shape = SubResource("RectangleShape2D_rglt0")
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_xsi7p")
