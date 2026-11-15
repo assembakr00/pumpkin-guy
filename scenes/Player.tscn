@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bmunsjwdgny57" path="res://assets/brackeys_platformer_assets/sprites/knight.png" id="1_p0vlq"]
 [ext_resource type="Script" uid="uid://fr1i4wgyv7e2" path="res://scripts/player.gd" id="1_v6fml"]
 [ext_resource type="Texture2D" uid="uid://ddqvuhqdnol8p" path="res://assets/player-idle.png" id="2_3li8b"]
+[ext_resource type="Texture2D" uid="uid://ig4v8m0g77m7" path="res://assets/player-sleeping.png" id="4_mdl7e"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mdl7e"]
 atlas = ExtResource("2_3li8b")
@@ -84,6 +85,22 @@ region = Rect2(192, 96, 32, 32)
 atlas = ExtResource("1_p0vlq")
 region = Rect2(224, 96, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_p07f3"]
+atlas = ExtResource("4_mdl7e")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_viqgg"]
+atlas = ExtResource("4_mdl7e")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgkxt"]
+atlas = ExtResource("4_mdl7e")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsi7p"]
+atlas = ExtResource("4_mdl7e")
+region = Rect2(96, 0, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_l8iau"]
 animations = [{
 "frames": [{
@@ -155,6 +172,23 @@ animations = [{
 "loop": 1,
 "name": &"run",
 "speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p07f3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_viqgg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgkxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xsi7p")
+}],
+"loop": 0,
+"name": &"sleeping",
+"speed": 1.5
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xsi7p"]
@@ -165,8 +199,10 @@ script = ExtResource("1_v6fml")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=60712439]
 sprite_frames = SubResource("SpriteFrames_l8iau")
-animation = &"idle"
+animation = &"sleeping"
 autoplay = "idle"
+frame = 3
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2009662776]
 position = Vector2(0, 0.5)
