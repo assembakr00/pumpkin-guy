@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://bmunsjwdgny57" path="res://assets/brackeys_platformer_assets/sprites/knight.png" id="1_p0vlq"]
 [ext_resource type="Script" uid="uid://fr1i4wgyv7e2" path="res://scripts/player.gd" id="1_v6fml"]
-[ext_resource type="Texture2D" uid="uid://ddqvuhqdnol8p" path="res://assets/player-idle.png" id="2_3li8b"]
-[ext_resource type="Texture2D" uid="uid://ig4v8m0g77m7" path="res://assets/player-sleeping.png" id="4_mdl7e"]
+[ext_resource type="Texture2D" uid="uid://ddqvuhqdnol8p" path="res://assets/my art/player-idle.png" id="2_3li8b"]
+[ext_resource type="Texture2D" uid="uid://ig4v8m0g77m7" path="res://assets/my art/player-sleeping.png" id="4_mdl7e"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mdl7e"]
 atlas = ExtResource("2_3li8b")

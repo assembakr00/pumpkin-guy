@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ig4v8m0g77m7"
-path="res://.godot/imported/player-sleeping.png-8b910259e3765e610effde428240e16f.ctex"
+uid="uid://cmekcyi0d24o3"
+path="res://.godot/imported/tileset.png-73bc3b183b57908c17b59c9f62e8db54.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player-sleeping.png"
-dest_files=["res://.godot/imported/player-sleeping.png-8b910259e3765e610effde428240e16f.ctex"]
+source_file="res://assets/my art/tileset.png"
+dest_files=["res://.godot/imported/tileset.png-73bc3b183b57908c17b59c9f62e8db54.ctex"]
 
 [params]
 
