@@ -24,13 +24,13 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	var direction := Input.get_axis("ui_left", "ui_right")
-	var has_input := direction != 0 or Input.is_action_pressed("ui_accept")
+	var direction := Input.get_axis("move_left", "move_right")
+	var has_input := direction != 0 or Input.is_action_pressed("jump")
 	if has_input:
 		is_sleeping = false
 		inactivity_timer.start()
 
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	if direction != 0:
