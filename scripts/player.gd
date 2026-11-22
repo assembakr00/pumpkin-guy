@@ -28,10 +28,11 @@ func _physics_process(delta: float) -> void:
 	var has_input := direction != 0 or Input.is_action_pressed("jump")
 	if has_input:
 		is_sleeping = false
-		inactivity_timer.start()
+		inactivity_timer.start("jump")
 
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		animated_sprite.play("run")
 
 	if direction != 0:
 		velocity.x = direction * SPEED
