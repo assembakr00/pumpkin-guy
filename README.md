@@ -30,3 +30,5 @@ Switch between different game modes as the project grows.
 **Scavenger Hunt** - Search the map and collect everything you can.
 **Survival** - Stay alive while the world gets a lot less chill.
 **Jumpscare Mode** - For when “not so spooky” stops being true though its kinda not anyways.
+
+and maybe even some cool mixes and dont forget to check my other games here!! https://ctrl-z-assem.itch.io/
