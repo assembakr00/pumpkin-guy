@@ -2,9 +2,18 @@
 
 Pumpkin Guy is a not-so-spooky adventure game about one little pumpkin trying to get his body back.
 
-Right now, it is a pixel-art platformer with parkour, exploration, and plenty of places to jump around and cave into. Later on, the plan is to turn it into a bigger scavenger hunt with survival, weird surprises, and maybe a few jumpscares.
+Right now, it is a pixel-art platformer with parkour, exploration, and plenty of places to jump around and cave into. Later on, the plan is to turn it into a bigger scavenger hunt with survival, weird surprises, and maybe a few jumpscares oh and i added a cool animation when ur inactive worth seeing btw
 
- u can play it by go to the itch.io
+ u can play it by go to the itch.io here https://ctrl-z-assem.itch.io/not-so-spooky-pumpkin-guy
+
+## How to play?
+
+ just load the game on itch.io
+
+-**jump** is space/w/up-arrow  
+-**right** is right-arrow/d
+-**left** is left-arrow/a
+
 ## What is the game?
 
 Explore a spooky-but-fun world and
