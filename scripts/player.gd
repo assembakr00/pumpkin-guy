@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 const SPEED: float = 300.0
 const JUMP_VELOCITY: float = -400.0
-const SLEEP_TIME: float = 5.0
+const SLEEP_TIME: float = 7.0
 const SLEEP_ANIMATION: StringName = &"sleeping"
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -28,21 +28,36 @@ func _physics_process(delta: float) -> void:
 	var has_input := direction != 0 or Input.is_action_pressed("jump")
 	if has_input:
 		is_sleeping = false
-		inactivity_timer.start-()
+		inactivity_timer.start()
 
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-		animated_sprite.play("run")
 
 	if direction != 0:
 		velocity.x = direction * SPEED
-		animated_sprite.play("run")
 		animated_sprite.flip_h = direction < 0
-	elif not is_sleeping:
+	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		animated_sprite.play("idle")
+
+	if not is_on_floor():
+		if velocity.y < 0:
+			_play_animation(&"jump")
+		elif animated_sprite.sprite_frames.has_animation(&"fall"):
+			_play_animation(&"fall")
+		else:
+			_play_animation(&"jump")
+	elif not is_sleeping:
+		if direction != 0:
+			_play_animation(&"run")
+		else:
+			_play_animation(&"idle")
 
 	move_and_slide()
+
+
+func _play_animation(animation_name: StringName) -> void:
+	if animated_sprite.animation != animation_name:
+		animated_sprite.play(animation_name)
 
 
 func _on_inactivity_timeout() -> void:

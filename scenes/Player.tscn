@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://fr1i4wgyv7e2" path="res://scripts/player.gd" id="1_v6fml"]
 [ext_resource type="Texture2D" uid="uid://ddqvuhqdnol8p" path="res://assets/my art/player-idle.png" id="2_3li8b"]
 [ext_resource type="Texture2D" uid="uid://daw620pfu7dbt" path="res://assets/my art/walk.png" id="3_mdl7e"]
+[ext_resource type="Texture2D" uid="uid://dlipudph5l2gw" path="res://assets/my art/player-jump-sheet.png" id="3_qu4a1"]
 [ext_resource type="Texture2D" uid="uid://ig4v8m0g77m7" path="res://assets/my art/player-sleeping.png" id="4_mdl7e"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mdl7e"]
@@ -20,6 +21,22 @@ region = Rect2(64, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_6e537"]
 atlas = ExtResource("2_3li8b")
 region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6eyey"]
+atlas = ExtResource("3_qu4a1")
+region = Rect2(0, 0, 37, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3wef"]
+atlas = ExtResource("3_qu4a1")
+region = Rect2(37, 0, 37, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4126"]
+atlas = ExtResource("3_qu4a1")
+region = Rect2(74, 0, 37, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkdrv"]
+atlas = ExtResource("3_qu4a1")
+region = Rect2(111, 0, 37, 35)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_70d11"]
 atlas = ExtResource("3_mdl7e")
@@ -73,6 +90,23 @@ animations = [{
 "speed": 4.0
 }, {
 "frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_6eyey")
+}, {
+"duration": 1.4,
+"texture": SubResource("AtlasTexture_d3wef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4126")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lkdrv")
+}],
+"loop": 0,
+"name": &"jump",
+"speed": 12.0
+}, {
+"frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_70d11")
 }, {
@@ -115,9 +149,10 @@ script = ExtResource("1_v6fml")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=60712439]
 sprite_frames = SubResource("SpriteFrames_l8iau")
-animation = &"run"
+animation = &"jump"
 autoplay = "idle"
-frame_progress = 0.7997611
+frame = 3
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2009662776]
 position = Vector2(0, 0.5)
